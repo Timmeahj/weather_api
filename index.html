@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Weather API</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+        <link rel="stylesheet" href="normalize.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div id="search" class="row col-sm-12 col-md-10 col-lg-8">
+                <header class="weatherbot textcenter">
+                    WeatherBot
+                </header>
+                <input type="text" id="city" class="form-control" placeholder="Insert city"/>
+                <button type="button" id="run" class="btn btn-primary">Go!</button>
+            </div>
+            <div id="summary" class="gone row col-sm-12">
+                <div id="200" class="block selected center col-sm-6 col-md-4 col-lg-2">
+                    <div id="sday1" class="col-sm-12"></div>
+                </div>
+                <div id="201" class="block center col-sm-6 col-md-4 col-lg-2">
+                    <div id="sday2" class="col-sm-12"></div>
+                </div>
+                <div id="202" class="block center col-sm-6 col-md-4 col-lg-2">
+                    <div id="sday3" class="col-sm-12"></div>
+                </div>
+                <div id="203" class="block center col-sm-6 col-md-4 col-lg-2">
+                    <div id="sday4" class="col-sm-12"></div>
+                </div>
+                <div id="204" class="block center col-sm-6 col-md-4 col-lg-2">
+                    <div id="sday5" class="col-sm-12"></div>
+                </div>
+            </div>
+            <div id="navigate" class="gone row col-sm-12">
+                    <div class="center col-sm-12 col-md-4 col-lg-3">
+                        <button type="button" id="previous" class="btn btn-primary">Previous</button>
+                        <button type="button" id="next" class="btn btn-primary">Next</button>
+                    </div>
+                </div>
+            <div id="weather" class="gone row">
+                <div id="100" class="row col-sm-12">
+                    <div id="day1" class="col-sm-12"></div>
+                <div id="morning" class="row col-sm-12">
+                    <div id="0" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="1" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="2" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="3" class="center block col-sm-6 col-md-3">
+                    </div>
+                </div>
+                <div id="noon" class="row col-sm-12">   
+                    <div id="4" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="5" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="6" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="7" class="center block col-sm-6 col-md-3">
+                    </div>
+                </div>
+                </div>
+                <div id="101" class="row col-sm-12 gone">
+                    <div id="day2" class="col-sm-12"></div>
+                <div id="morning" class="row col-sm-12">
+                    <div id="8" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="9" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="10" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="11" class="center block col-sm-6 col-md-3">
+                    </div>
+                </div>
+                <div id="noon" class="row col-sm-12">   
+                    <div id="12" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="13" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="14" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="15" class="center block col-sm-6 col-md-3">
+                    </div>
+                </div>
+                </div>
+                <div id="102" class="row col-sm-12 gone">
+                    <div id="day3" class="col-sm-12"></div>
+                <div id="morning" class="row col-sm-12">
+                    <div id="16" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="17" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="18" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="19" class="center block col-sm-6 col-md-3">
+                    </div>
+                </div>
+                <div id="noon" class="row col-sm-12">   
+                    <div id="20" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="21" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="22" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="23" class="center block col-sm-6 col-md-3">
+                    </div>
+                </div>
+                </div>
+                <div id="103" class="row col-sm-12 gone">
+                    <div id="day4" class="col-sm-12"></div>
+                <div id="morning" class="row col-sm-12">
+                    <div id="24" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="25" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="26" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="27" class="center block col-sm-6 col-md-3">
+                    </div>
+                </div>
+                <div id="noon" class="row col-sm-12">   
+                    <div id="28" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="29" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="30" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="31" class="center block col-sm-6 col-md-3">
+                    </div>
+                </div>
+                </div>
+                <div id="104" class="row col-sm-12 gone">
+                    <div id="day5" class="col-sm-12"></div>
+                <div id="morning" class="row col-sm-12">
+                    <div id="32" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="33" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="34" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="35" class="center block col-sm-6 col-md-3">
+                    </div>
+                </div>
+                <div id="noon" class="row col-sm-12">   
+                    <div id="36" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="37" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="38" class="center block col-sm-6 col-md-3">
+                    </div>
+                    <div id="39" class="center block col-sm-6 col-md-3">
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+        
+    </body>
+</html>

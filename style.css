@@ -1,0 +1,103 @@
+body{
+  background: skyblue;
+}
+
+header{
+  width: 100%;
+}
+
+.container{
+  padding: 0;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.row{
+  margin: 0;
+  padding: 0;
+}
+
+.gone{
+  display: none;
+}
+
+#weather{
+  text-align: center;
+}
+
+#search{
+  margin: 0 auto;
+}
+
+#city{
+  width: 80%;
+  margin-right: 10%;
+}
+
+#run{
+  width: 10%;
+}
+
+@media only screen and (max-width: 575px) {
+  #city{
+    width: 60%;
+  }
+
+  #run{
+    width: 30%;
+  }
+}
+
+.passed{
+  background: black;
+  opacity: 0.3;
+}
+
+#previous, #next{
+  width: 40%;
+}
+
+#previous{
+  margin-right: 10%;
+}
+
+.center{
+  margin: 0 auto;
+}
+
+#summary{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.block{
+  background: rgba(255,255,255,0.4);
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-right: 3px solid skyblue;
+}
+
+.selected{
+  border: 3px solid white;
+}
+
+.textcenter{
+  text-align: center;
+}
+
+.big{
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: white;
+}
+.weatherbot{
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: white;
+}
