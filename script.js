@@ -27,12 +27,6 @@
 		day4.innerHTML = title + days[(date.getDay()+3)] + title2;
 		day5.innerHTML = title + days[(date.getDay()+4)] + title2;
 
-		sday1.innerHTML = title + dayName + title2;
-		sday2.innerHTML = title + days[(date.getDay()+1)] + title2;
-		sday3.innerHTML = title + days[(date.getDay()+2)] + title2;
-		sday4.innerHTML = title + days[(date.getDay()+3)] + title2;
-		sday5.innerHTML = title + days[(date.getDay()+4)] + title2;
-
 		document.getElementById("navigate").classList.remove("gone");
 		document.getElementById("summary").classList.remove("gone");
 
@@ -194,23 +188,28 @@
 				console.log(weather.list[0].main.temp);
 				console.log(avgtemp1);
 
-				document.getElementById("200").innerHTML += 	div + avgtemp1 + div2 +
+				document.getElementById("200").innerHTML = 		title + dayName + title2 +
+																div + avgtemp1 + div2 +
 		  														div + avgmintemp1 + div2 + 
 		  														div + avgmaxtemp1 + div2;
 				
-				document.getElementById("201").innerHTML += 	div + avgtemp2 + div2 +
+				document.getElementById("201").innerHTML = 		title + days[(date.getDay()+1)] + title2 +
+																div + avgtemp2 + div2 +
 		  														div + avgmintemp2 + div2 + 
 		  														div + avgmaxtemp2 + div2;
 
-		  		document.getElementById("202").innerHTML += 	div + avgtemp3 + div2 +
+		  		document.getElementById("202").innerHTML = 		title + days[(date.getDay()+2)] + title2 +
+		  														div + avgtemp3 + div2 +
 		  														div + avgmintemp3 + div2 + 
 		  														div + avgmaxtemp3 + div2;
 
-				document.getElementById("203").innerHTML += 	div + avgtemp4 + div2 +
+				document.getElementById("203").innerHTML = 		title + days[(date.getDay()+3)] + title2 +
+																div + avgtemp4 + div2 +
 		  														div + avgmintemp4 + div2 + 
 		  														div + avgmaxtemp4 + div2;
 
-		  		document.getElementById("204").innerHTML += 	div + avgtemp5 + div2 +
+		  		document.getElementById("204").innerHTML = 		title + days[(date.getDay()+4)] + title2 +
+		  														div + avgtemp5 + div2 +
 		  														div + avgmintemp5 + div2 + 
 		  														div + avgmaxtemp5 + div2;											
 			
